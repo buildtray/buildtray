@@ -2,7 +2,8 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
-    "start": "turbo start" ,
+    "start": "turbo start",
+    "deploy": "turbo deploy",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
