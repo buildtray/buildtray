@@ -1,5 +1,13 @@
+import { initializeApp, applicationDefault } from "firebase-admin/app";
+import { getFirestore } from "firebase-admin/firestore";
+
 const websockets: WebSocket[] = [];
 
+initializeApp({
+  credential: applicationDefault(),
+});
+
+const db = getFirestore();
 async function handleSession(websocket: any) {
   websocket.accept();
   websocket.addEventListener("message", async ({ data }: { data: any }) => {

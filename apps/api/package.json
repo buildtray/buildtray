@@ -4,12 +4,16 @@
   "private": true,
   "scripts": {
     "deploy": "wrangler deploy",
+    "build": "esbuild src/worker.ts --bundle --minify --platform=node --target=node16 --outfile=dist/index.js",
     "start": "wrangler dev"
   },
+  "type": "module",
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20230419.0",
     "typescript": "^5.0.4",
     "wrangler": "^3.0.1",
+    "esbuild": "latest",
+    "firebase-admin": "*",
     "eslint-config-custom": "*"
   }
 }
