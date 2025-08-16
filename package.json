@@ -3,6 +3,7 @@
   "scripts": {
     "build": "turbo build",
     "start": "turbo start",
+    "dev": "turbo dev",
     "deploy": "turbo deploy",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
@@ -12,12 +13,8 @@
     "eslint": "^7.32.0",
     "eslint-config-custom": "*",
     "prettier": "^2.5.1",
-    "turbo": "^1.9.7"
+    "turbo": "^2.5.6"
   },
   "name": "buildtray",
-  "packageManager": "yarn@1.22.19",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ]
+  "packageManager": "pnpm@10.14.0"
 }
